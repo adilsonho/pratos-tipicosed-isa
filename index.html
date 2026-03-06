@@ -1,469 +1,355 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurante Angolano Premium | Gastronomia Tradicional</title>
 
-  <title>Restaurante Angolano Premium | Gastronomia Tradicional de Angola</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Restaurante de gastronomia angolana premium. Pratos tradicionais como Kikwanga, Fumbua, Katatu, Magoga e Macaiabo. Faça seu pedido via WhatsApp." />
-  <meta name="keywords" content="restaurante angolano, gastronomia angolana, comida tradicional de angola, kikwanga, fumbua, katatu, magoga, macaiabo, comida africana premium" />
-  <meta name="author" content="Restaurante Angolano Premium" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Gastronomia Angolana Premium" />
-  <meta property="og:description" content="O sabor autêntico de Angola no seu prato. Faça pedidos online via WhatsApp." />
-  <meta property="og:image" content="./img/og-image.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_PT" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-  <!-- Tailwind -->
+  <meta name="description" content="Restaurante de gastronomia angolana premium. Pratos tradicionais como Kikwanga, Fumbua e mais." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <style>
     .afro-pattern {
-      background-image: repeating-linear-gradient(
-        45deg,
-        rgba(184, 134, 11, 0.08),
-        rgba(184, 134, 11, 0.08) 10px,
-        transparent 10px,
-        transparent 20px
-      );
+      background-image: repeating-linear-gradient(45deg, rgba(184, 134, 11, 0.05) 0px, rgba(184, 134, 11, 0.05) 10px, transparent 10px, transparent 20px);
     }
-
-    .card-image {
-      height: 220px;
-    }
-
-    @media (max-width: 640px) {
-      .card-image {
-        height: 180px;
-      }
-    }
+    .card-zoom:hover img { transform: scale(1.1); }
+    .glass-nav { background: rgba(250, 248, 245, 0.9); backdrop-filter: blur(8px); }
   </style>
 </head>
 
-<body class="bg-[#FAF8F5] text-gray-800">
+<body class="bg-[#FAF8F5] text-gray-800 font-sans">
 
-<!-- ================= HERO ================= -->
-<section class="afro-pattern">
-  <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+<nav class="glass-nav sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <span class="text-xl font-bold text-[#8B4513]">Angola<span class="text-[#B8860B]">Premium</span></span>
+    <div class="hidden md:flex gap-6 text-sm font-semibold uppercase tracking-wider">
+      <a href="#menu" class="hover:text-[#B8860B] transition">Menu</a>
+      <a href="#combos" class="hover:text-[#B8860B] transition">Combos</a>
+      <a href="#monte-prato" class="hover:text-[#B8860B] transition">Personalizado</a>
+    </div>
+  </div>
+</nav>
 
-    <div>
-      <h1 class="text-4xl md:text-5xl font-bold text-[#8B4513] leading-tight">
-        O Sabor Autêntico de Angola no seu Prato
-      </h1>
-      <p class="mt-6 text-lg text-gray-600">
-        Cozinha africana profissional, tradição, identidade e sofisticação.
-      </p>
-      <a href="#menu" class="inline-block mt-8 px-8 py-3 bg-[#B8860B] text-white rounded-lg font-semibold hover:opacity-90 transition">
-        Ver Menu
-      </a>
+<main>
+  <section class="afro-pattern border-b border-orange-100">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-[#B8860B] font-bold tracking-widest uppercase text-sm">Tradição e Identidade</span>
+        <h1 class="text-4xl md:text-6xl font-black text-[#8B4513] leading-tight mt-4">
+          O Sabor Autêntico de Angola no seu Prato
+        </h1>
+        <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+          Cozinha africana profissional, unindo tradição, identidade e sofisticação em cada ingrediente.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#menu" class="px-8 py-4 bg-[#B8860B] text-white rounded-xl font-bold hover:bg-[#8B4513] shadow-lg shadow-orange-200 transition-all transform hover:-translate-y-1">
+            Ver Menu Completo
+          </a>
+        </div>
+      </div>
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-[#B8860B] to-[#8B4513] rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+        <img src="./assets/css/images/chefes.png.webp" alt="Chef Angola" class="relative rounded-3xl shadow-2xl w-full object-cover aspect-[4/3]">
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#8B4513]">Pratos Tradicionais</h2>
+      <p class="text-gray-500 mt-2">A verdadeira essência da culinária angolana</p>
     </div>
 
-    <div class="flex justify-center">
-      <img 
-        src="./assets/css/images/chefes.png.png"
-        alt="Chef profissional de gastronomia angolana premium"
-        class="rounded-2xl shadow-xl max-w-sm md:max-w-md w-full object-cover"
-        loading="eager"
-      />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden card-zoom">
+        <div class="h-56 overflow-hidden relative">
+          <img src="./assets/css/images/hamburger1.webp" alt="Hambúrguer" class="w-full h-full object-cover transition-transform duration-500">
+          <span class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-sm font-bold text-[#B8860B]">Especial</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800">Hambúrguer à Moda Angolana</h3>
+          <p class="text-sm text-gray-500 mt-2 leading-relaxed">Sabor africano marcante com um toque de modernidade urbana.</p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="text-2xl font-black text-[#B8860B]">R$ 40,00</span>
+            <button onclick="openModal('Hambúrguer à Moda Angolana')" class="bg-[#8B4513] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#B8860B] transition-colors">Pedir</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden card-zoom">
+        <div class="h-56 overflow-hidden">
+          <img src="./assets/css/images/magoga1.webp" alt="Magoga" class="w-full h-full object-cover transition-transform duration-500">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800">Magoga Da Banda</h3>
+          <p class="text-sm text-gray-500 mt-2">Frango suculento, salada fresca, batata e o pão tradicional.</p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="text-2xl font-black text-[#B8860B]">R$ 35,00</span>
+            <button onclick="openModal('Magoga Da Banda')" class="bg-[#8B4513] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#B8860B] transition-colors">Pedir</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden card-zoom">
+        <div class="h-56 overflow-hidden"><img src="./assets/css/images/macaiabo1.webp" class="w-full h-full object-cover transition-transform duration-500"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800">Macaiabo</h3>
+          <p class="text-sm text-gray-500 mt-2">Bacalhau seco premium acebolado com pimenta vibrante.</p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="text-2xl font-black text-[#B8860B]">R$ 15,00</span>
+            <button onclick="openModal('Macaiabo')" class="bg-[#8B4513] text-white px-5 py-2 rounded-lg font-bold">Pedir</button>
+          </div>
+        </div>
+      </article>
+      
+      <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden card-zoom">
+        <div class="h-56 overflow-hidden"><img src="./assets/css/images/kikuanga1.webp" class="w-full h-full object-cover transition-transform duration-500"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800">Kikwanga</h3>
+          <p class="text-sm text-gray-500 mt-2">Massa fermentada de mandioca artesanal</p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="text-2xl font-black text-[#B8860B]">R$ 15,00</span>
+            <button onclick="openModal('Kikwanga')" class="bg-[#8B4513] text-white px-5 py-2 rounded-lg font-bold">Pedir</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden card-zoom">
+        <div class="h-56 overflow-hidden"><img src="./assets/css/images/katato.img.webp" class="w-full h-full object-cover transition-transform duration-500"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800">Katatu</h3>
+          <p class="text-sm text-gray-500 mt-2">O clássico absoluto da culinária das nossas terras.</p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="text-2xl font-black text-[#B8860B]">R$ 20,00</span>
+            <button onclick="openModal('Katatu')" class="bg-[#8B4513] text-white px-5 py-2 rounded-lg font-bold">Pedir</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden card-zoom">
+        <div class="h-56 overflow-hidden"><img src="./assets/css/images/fumbua.img.webp" class="w-full h-full object-cover transition-transform duration-500"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800">Fumbua</h3>
+          <p class="text-sm text-gray-500 mt-2">Prato rico em história e sabor inconfundível.</p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="text-2xl font-black text-[#B8860B]">R$ 15,00</span>
+            <button onclick="openModal('Fumbua')" class="bg-[#8B4513] text-white px-5 py-2 rounded-lg font-bold">Pedir</button>
+          </div>
+        </div>
+      </article>
     </div>
-
-  </div>
-</section>
-
-<!-- ================= MENU ================= -->
-<section id="menu" class="max-w-7xl mx-auto px-6 py-20" aria-labelledby="menu-angolano">
-  <h2 id="menu-angolano" class="text-3xl font-bold text-center text-[#8B4513] mb-12">
-    Pratos Tradicionais de Angola
-  </h2>
-
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    <!-- CARD -->
-    <article class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <div class="card-image w-full overflow-hidden">
-        <img src="./assets/css/images/hamburger1.png" alt="Hambúrguer à Moda Angolana" class="w-full h-full object-cover" loading="lazy">
+  </section> <section id="combos" class="bg-[#fdfbf7] py-20 border-y border-orange-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#8B4513]">Combos Especiais</h2>
+        <p class="text-gray-600 mt-2">A melhor experiência para compartilhar com quem você ama.</p>
       </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold">Hambúrguer à Moda Angolana</h3>
-        <p class="text-sm text-gray-600 mt-2">Sabor africano com toque moderno.</p>
-        <p class="mt-3 font-bold text-[#B8860B]">40 R$</p>
-        <button onclick="openModal('Hambúrguer à Moda Angolana')" class="mt-4 w-full bg-[#8B4513] text-white py-2 rounded-lg">
-          Fazer Pedido
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-3xl p-8 border-b-8 border-[#B8860B] shadow-lg hover:-translate-y-2 transition-transform">
+          <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo Família</h3>
+          <ul class="text-sm space-y-3 mb-8 text-gray-600">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Katatu & Macaiabo</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Kikwanga & Fumbua</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Banana Frita</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Refrigerante 600ml</li>
+          </ul>
+          <div class="text-3xl font-black text-[#B8860B] mb-6">R$ 99,99</div>
+          <button onclick="openModal('Combo Família')" class="w-full bg-[#8B4513] text-white py-3 rounded-xl font-bold hover:bg-black transition">Pedir Combo</button>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border-b-8 border-[#8B4513] shadow-lg">
+          <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo Tradicional</h3>
+          <ul class="text-sm text-gray-600 space-y-2 mb-6"> 
+          <li> <i class="fas fa-check text-green-500 mr-2"></i>Fumbua </li> 
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Macaiabo</li> 
+          <li><i class="fas fa-check text-green-500 mr-2"></i> Kikwanga</li> 
+          <li> <i class="fas fa-check text-green-500 mr-2"></i>Bebida</li> 
+        </ul>
+          <div class="text-3xl font-black text-[#B8860B] mb-6">R$ 49,99</div>
+          <button onclick="openModal('Combo Tradicional')" class="w-full bg-[#8B4513] text-white py-3 rounded-xl font-bold">Pedir Combo</button>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border-b-8 border-[#B8860B] shadow-lg">
+          <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo X-Burguer</h3>
+           <ul class="text-sm text-gray-600 space-y-2 mb-6"> 
+          <li> <i class="fas fa-check text-green-500 mr-2"></i>Hambúrguer </li> 
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Batata</li> 
+          <li> <i class="fas fa-check text-green-500 mr-2"></i>Coca-Cola 350ml</li> 
+          <p>Pão Brioche, hamburger 120g, queijo, maionese da casa - Batata frita, Refrigerante lata 350ml</p>
+        </ul>
+          <div class="text-3xl font-black text-[#B8860B] mb-6">R$ 39,99</div>
+          <button onclick="openModal('Combo X-Burguer')" class="w-full bg-[#8B4513] text-white py-3 rounded-xl font-bold">Pedir Combo</button>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border-b-8 border-[#8B4513] shadow-lg">
+          <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo Casal</h3>
+            <ul class="text-sm text-gray-600 space-y-2 mb-6"> 
+          <li> <i class="fas fa-check text-green-500 mr-2"></i>Frango Grelhado </li> 
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Batata Frita</li> 
+          <li><i class="fas fa-check text-green-500 mr-2"></i> Banana Frita</li> 
+          <li> <i class="fas fa-check text-green-500 mr-2"></i>Coca-Cola 350ml</li> 
+        </ul>
+          <div class="text-3xl font-black text-[#B8860B] mb-6">R$ 69,99</div>
+          <button onclick="openModal('Combo Casal')" class="w-full bg-[#8B4513] text-white py-3 rounded-xl font-bold">Pedir Combo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="monte-prato" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-gray-100">
+      <div class="bg-[#8B4513] p-10 text-center text-white">
+        <h2 class="text-3xl font-bold">Personalize seu Pedido</h2>
+        <p class="opacity-80 mt-2">Escolha os itens e receba do seu jeito</p>
+      </div>
+      
+      <div class="p-8 md:p-12">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="font-bold text-[#8B4513] mb-6 flex items-center"><i class="fas fa-utensils mr-2"></i> Selecione os itens:</h3>
+            <div class="space-y-4">
+              <label class="flex items-center p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-orange-50 transition">
+                <input type="checkbox" value="Macaiabo" class="item-checkbox w-5 h-5 accent-[#B8860B]">
+                <span class="ml-3 font-medium">Macaiabo</span>
+              </label>
+              <label class="flex items-center p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-orange-50 transition">
+                <input type="checkbox" value="Fumbua" class="item-checkbox w-5 h-5 accent-[#B8860B]">
+                <span class="ml-3 font-medium">Fumbua</span>
+              </label>
+              <label class="flex items-center p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-orange-50 transition">
+                <input type="checkbox" value="Kikwanga" class="item-checkbox w-5 h-5 accent-[#B8860B]">
+                <span class="ml-3 font-medium">Kikwanga</span>
+              </label>
+              <label class="flex items-center p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-orange-50 transition">
+                <input type="checkbox" value="Katatu" class="item-checkbox w-5 h-5 accent-[#B8860B]">
+                <span class="ml-3 font-medium">Katatu</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-bold text-[#8B4513] mb-6 flex items-center"><i class="fas fa-user mr-2"></i> Seus Dados:</h3>
+            <input id="customNome" type="text" placeholder="Nome completo" class="w-full border-gray-200 border p-4 rounded-xl focus:ring-2 focus:ring-[#B8860B] outline-none transition">
+            <input id="customMorada" type="text" placeholder="Endereço de entrega" class="w-full border-gray-200 border p-4 rounded-xl focus:ring-2 focus:ring-[#B8860B] outline-none">
+            <input id="customQtd" type="number" placeholder="Quantidade de pratos" class="w-full border-gray-200 border p-4 rounded-xl focus:ring-2 focus:ring-[#B8860B] outline-none">
+            <textarea id="customObs" placeholder="Observações especiais..." class="w-full border-gray-200 border p-4 rounded-xl h-28 focus:ring-2 focus:ring-[#B8860B] outline-none"></textarea>
+          </div>
+        </div>
+
+        <button onclick="sendCustomOrder()" class="mt-12 w-full bg-[#B8860B] text-white py-5 rounded-2xl font-bold text-xl hover:bg-[#8B4513] shadow-xl transition-all flex items-center justify-center gap-3">
+          <i class="fab fa-whatsapp text-2xl"></i> Enviar Pedido Personalizado
         </button>
       </div>
-    </article>
+    </div>
+  </section>
+</main>
 
-    <article class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <div class="card-image w-full overflow-hidden">
-        <img src="./assets/css/images/magoga1.png" alt="Magoga Da Banda" class="w-full h-full object-cover" loading="lazy">
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold">Magoga Da Banda</h3>
-        <p class="text-sm text-gray-600 mt-2">Frango, salada, batata e pão tradicional.</p>
-        <p class="mt-3 font-bold text-[#B8860B]">35 R$</p>
-        <button onclick="openModal('Magoga Da Banda')" class="mt-4 w-full bg-[#8B4513] text-white py-2 rounded-lg">
-          Fazer Pedido
+<div id="modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-[2rem] w-full max-w-md p-8 shadow-2xl relative">
+    <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-red-500 text-2xl">&times;</button>
+    <h3 class="text-2xl font-bold text-[#8B4513] mb-6">Finalizar Pedido</h3>
+
+    <div class="space-y-4">
+      <input id="prato" type="text" class="w-full bg-gray-50 border-none p-4 rounded-xl font-bold text-[#B8860B]" readonly>
+      <input id="nome" type="text" placeholder="Seu nome" class="w-full border border-gray-100 p-4 rounded-xl focus:ring-2 focus:ring-[#B8860B] outline-none">
+      <input id="morada" type="text" placeholder="Endereço de entrega" class="w-full border border-gray-100 p-4 rounded-xl focus:ring-2 focus:ring-[#B8860B] outline-none">
+      <input id="quantidade" type="number" placeholder="Quantidade" class="w-full border border-gray-100 p-4 rounded-xl focus:ring-2 focus:ring-[#B8860B] outline-none">
+      <textarea id="obs" placeholder="Observações" class="w-full border border-gray-100 p-4 rounded-xl h-24 focus:ring-2 focus:ring-[#B8860B] outline-none"></textarea>
+
+      <div class="flex gap-3 pt-4">
+        <button onclick="closeModal()" class="flex-1 py-4 text-gray-500 font-bold hover:bg-gray-50 rounded-xl transition">Cancelar</button>
+        <button onclick="sendWhatsApp()" class="flex-[2] bg-green-600 text-white py-4 rounded-xl font-bold hover:bg-green-700 shadow-lg transition">
+          Confirmar Pedido
         </button>
       </div>
-    </article>
-
-    <article class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <div class="card-image w-full overflow-hidden">
-        <img src="./assets/css/images/macaiabo1.png" alt="Macaiabo Angolano" class="w-full h-full object-cover" loading="lazy">
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold">Macaiabo</h3>
-        <p class="text-sm text-gray-600 mt-2">Bacalhau acebolado com pimenta.</p>
-        <p class="mt-3 font-bold text-[#B8860B]">15 R$</p>
-        <button onclick="openModal('Macaiabo')" class="mt-4 w-full bg-[#8B4513] text-white py-2 rounded-lg">
-          Fazer Pedido
-        </button>
-      </div>
-    </article>
-
-    <article class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <div class="card-image w-full overflow-hidden">
-        <img src="./assets/css/images/kikuanga1.png" alt="Kikwanga Tradicional" class="w-full h-full object-cover" loading="lazy">
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold">Kikwanga</h3>
-        <p class="text-sm text-gray-600 mt-2">Massa fermentada de mandioca.</p>
-        <p class="mt-3 font-bold text-[#B8860B]">15 R$</p>
-        <button onclick="openModal('Kikwanga')" class="mt-4 w-full bg-[#8B4513] text-white py-2 rounded-lg">
-          Fazer Pedido
-        </button>
-      </div>
-    </article>
-
-    <article class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <div class="card-image w-full overflow-hidden">
-        <img src="./assets/css/images/katato.img.png" alt="Katatu" class="w-full h-full object-cover" loading="lazy">
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold">Katatu</h3>
-        <p class="text-sm text-gray-600 mt-2">Clássico da culinária angolana.</p>
-        <p class="mt-3 font-bold text-[#B8860B]">20 R$</p>
-        <button onclick="openModal('Katatu')" class="mt-4 w-full bg-[#8B4513] text-white py-2 rounded-lg">
-          Fazer Pedido
-        </button>
-      </div>
-    </article>
-
-        <article class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <div class="card-image w-full overflow-hidden">
-        <img src="./assets/css/images/fumbua.img.png" alt="Fumbua" class="w-full h-full object-cover" loading="lazy">
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold">Fumbua</h3>
-        <p class="text-sm text-gray-600 mt-2">Clássico da culinária angolana.</p>
-        <p class="mt-3 font-bold text-[#B8860B]">15 R$</p>
-        <button onclick="openModal('Fumbua')" class="mt-4 w-full bg-[#8B4513] text-white py-2 rounded-lg">
-          Fazer Pedido
-        </button>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ================= MODAL ================= -->
-<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-  <div class="bg-white rounded-xl w-full max-w-md p-6">
-    <h3 class="text-xl font-bold mb-4">Finalizar Pedido</h3>
-
-    <input id="prato" type="text" class="w-full border p-2 mb-3 rounded" readonly>
-    <input id="nome" type="text" placeholder="Seu nome" class="w-full border p-2 mb-3 rounded">
-    <input id="morada" type="text" placeholder="Morada de entrega" class="w-full border p-2 mb-3 rounded">
-    <input id="quantidade" type="number" placeholder="Quantidade" class="w-full border p-2 mb-3 rounded">
-    <textarea id="obs" placeholder="Observações" class="w-full border p-2 mb-3 rounded"></textarea>
-
-    <div class="flex gap-3">
-      <button onclick="closeModal()" class="w-1/2 bg-gray-300 py-2 rounded">Cancelar</button>
-      <button onclick="sendWhatsApp()" class="w-1/2 bg-green-600 text-white py-2 rounded">
-        Confirmar no WhatsApp
-      </button>
     </div>
   </div>
 </div>
 
-<!-- ================= JS ================= -->
-<script>
-function openModal(prato) {
-  document.getElementById('modal').classList.remove('hidden');
-  document.getElementById('modal').classList.add('flex');
-  document.getElementById('prato').value = prato;
-}
-
-function closeModal() {
-  document.getElementById('modal').classList.add('hidden');
-}
-
-function sendWhatsApp() {
-  const prato = document.getElementById('prato').value;
-  const nome = document.getElementById('nome').value;
-  const morada = document.getElementById('morada').value;
-  const qtd = document.getElementById('quantidade').value;
-  const obs = document.getElementById('obs').value;
-
-  const msg = `Pedido:%0APrato: ${prato}%0ANome: ${nome}%0AMorada: ${morada}%0AQuantidade: ${qtd}%0AObs: ${obs}`;
-  const phone = "5511941949178"; // ALTERAR
-  window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${msg}`, "_blank");
-}
-
-function sendCustomOrder() {
-
-  const checkboxes = document.querySelectorAll('.item-checkbox:checked');
-  let itensSelecionados = [];
-
-  checkboxes.forEach((checkbox) => {
-    itensSelecionados.push(checkbox.value);
-  });
-
-  if(itensSelecionados.length === 0){
-    alert("Selecione pelo menos um item.");
-    return;
-  }
-
-  const nome = document.getElementById('customNome').value;
-  const morada = document.getElementById('customMorada').value;
-  const qtd = document.getElementById('customQtd').value;
-  const obs = document.getElementById('customObs').value;
-
-  const msg = `Pedido Personalizado:%0AItens: ${itensSelecionados.join(", ")}%0ANome: ${nome}%0AMorada: ${morada}%0AQuantidade: ${qtd}%0AObs: ${obs}`;
-
-  const phone = "5511941949178"; // ALTERAR PARA SEU NÚMERO
-  window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${msg}`, "_blank");
-}
-
-</script>
-
-<!-- ================= COMBOS ================= -->
-<section id="combos" class="bg-[#FFFDF9] py-20">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-center text-[#8B4513] mb-4">
-      Combos Especiais da Casa
-    </h2>
-
-    <p class="text-center text-gray-600 mb-12">
-      Mais sabor, mais tradição e melhor preço para partilhar.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- COMBO 1 -->
-      <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#B8860B] hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo Família</h3>
-        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-          <li>✔ Katatu</li>
-          <li>✔ Macaiabo</li>
-          <li>✔ Kikwanga</li>
-          <li>✔ Fumbua </li>
-          <li>✔ Banana Frita</li>
-          <li>✔ Refrigerante 600ML</li>
-        </ul>
-        <p class="text-2xl font-bold text-[#B8860B] mb-4">99.99R$</p>
-        <button onclick="openModal('Combo Família')" class="w-full bg-[#8B4513] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">
-          Pedir Combo
-        </button>
-      </div>
-
-      <!-- COMBO 2 -->
-      <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#8B4513] hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo Tradicional</h3>
-        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-          <li>✔ Fumbua </li>
-          <li>✔ Macaiabo</li>
-          <li>✔ Kikwanga</li>
-          <li>✔ Bebida</li>
-        </ul>
-        <p class="text-2xl font-bold text-[#B8860B] mb-4">49.99R$</p>
-        <button onclick="openModal('Combo Tradicional')" class="w-full bg-[#8B4513] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">
-          Pedir Combo
-        </button>
-      </div>
-
-      <!-- COMBO 3 -->
-      <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#B8860B] hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo X-Burguer</h3>
-        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-          <li>✔ Hambúrguer</li>
-          <li>✔ Batata</li>
-          <li>✔ Coca-Cola 350ml</li>
-          <p>Pão Brioche, hamburger 120g, queijo, maionese da casa - Batata frita, Refrigerante lata 350ml</p>
-        </ul>
-        <p class="text-2xl font-bold text-[#B8860B] mb-4">39.99$</p>
-        <button onclick="openModal('Combo Executivo')" class="w-full bg-[#8B4513] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">
-          Pedir Combo
-        </button>
-      </div>
-
-      
-      <!-- COMBO 4 -->
-      <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#B8860B] hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-[#8B4513] mb-4">Combo Casal</h3>
-        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-          <li>✔ Frango Grelhado </li>
-          <li>✔ Batata Frita</li>
-          <li>✔ Banana Frita</li>
-          <li>✔ Coca-Cola 350ml</li>
-        </ul>
-        <p class="text-2xl font-bold text-[#B8860B] mb-4">69.99R$</p>
-        <button onclick="openModal('Combo Executivo')" class="w-full bg-[#8B4513] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">
-          Pedir Combo
-        </button>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= MONTE O SEU PRATO ================= -->
-<section id="monte-prato" class="bg-[#FFFDF9] py-20">
-  <div class="max-w-4xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-center text-[#8B4513] mb-4">
-      Monte o Seu Prato
-    </h2>
-
-    <p class="text-center text-gray-600 mb-10">
-      Escolha os acompanhamentos e crie sua combinação perfeita.
-    </p>
-
-    <div class="bg-white rounded-2xl shadow-xl p-8">
-
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <!-- Opções -->
-        <div>
-          <h3 class="font-semibold text-lg text-[#8B4513] mb-4">
-            Escolha os Itens:
-          </h3>
-
-          <div class="space-y-3 text-gray-700">
-
-            <label class="flex items-center gap-3">
-              <input type="checkbox" value="Macaiabo" class="item-checkbox w-4 h-4">
-              Macaiabo
-            </label>
-
-            <label class="flex items-center gap-3">
-              <input type="checkbox" value="Fumbua" class="item-checkbox w-4 h-4">
-              Fumbua
-            </label>
-
-            <label class="flex items-center gap-3">
-              <input type="checkbox" value="Kikwanga" class="item-checkbox w-4 h-4">
-              Kikwanga
-            </label>
-
-            <label class="flex items-center gap-3">
-              <input type="checkbox" value="Katatu" class="item-checkbox w-4 h-4">
-              Katatu
-            </label>
-
-              <label class="flex items-center gap-3">
-              <input type="checkbox" value="Katatu" class="item-checkbox w-4 h-4">
-              Banana
-            </label>
-
-
-          </div>
-        </div>
-
-        <!-- Dados -->
-        <div>
-          <h3 class="font-semibold text-lg text-[#8B4513] mb-4">
-            Seus Dados:
-          </h3>
-
-          <input id="customNome" type="text" placeholder="Seu nome"
-            class="w-full border p-2 mb-3 rounded">
-
-          <input id="customMorada" type="text" placeholder="Morada de entrega"
-            class="w-full border p-2 mb-3 rounded">
-
-          <input id="customQtd" type="number" placeholder="Quantidade"
-            class="w-full border p-2 mb-3 rounded">
-
-          <textarea id="customObs" placeholder="Observações"
-            class="w-full border p-2 mb-3 rounded"></textarea>
-
-        </div>
-      </div>
-
-      <button onclick="sendCustomOrder()" 
-        class="mt-8 w-full bg-[#8B4513] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">
-        Enviar Pedido Personalizado
-      </button>
-
-    </div>
-  </div>
-</section>
-
-</body>
-
-<!-- ================= FOOTER ================= -->
-<footer class="bg-[#2E1B0F] text-gray-200">
-  <div class="max-w-7xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-3">
-
-    <!-- Branding -->
+<footer class="bg-[#1A0F08] text-gray-400 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-3">
     <div>
-      <h3 class="text-xl font-bold text-[#B8860B] mb-3">
-        Gastronomia Angolana Premium
-      </h3>
-      <p class="text-sm text-gray-300">
-        O verdadeiro sabor de Angola, unindo tradição, cultura e sofisticação.
+      <h3 class="text-2xl font-bold text-white mb-6">Angola<span class="text-[#B8860B]">Premium</span></h3>
+      <p class="text-sm leading-relaxed">
+        Preservando a cultura através do paladar. Cada prato é uma viagem direta às raízes africanas.
       </p>
     </div>
-
-    <!-- Menu rápido -->
     <div>
-      <h4 class="font-semibold mb-3">Navegação</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-[#B8860B]">Início</a></li>
-        <li><a href="#menu" class="hover:text-[#B8860B]">Menu</a></li>
+      <h4 class="text-white font-bold mb-6">Links Rápidos</h4>
+      <ul class="space-y-3 text-sm">
+        <li><a href="#" class="hover:text-[#B8860B] transition">Início</a></li>
+        <li><a href="#menu" class="hover:text-[#B8860B] transition">Cardápio</a></li>
+        <li><a href="#combos" class="hover:text-[#B8860B] transition">Combos Família</a></li>
       </ul>
     </div>
-
-    <!-- Contacto -->
     <div>
-      <h4 class="font-semibold mb-3">Contacto</h4>
-      <p class="text-sm">📍 Brasil, São Paulo</p> 
-      <p class="text-sm"><i class="fa fa-whatsapp" style="font-size:18px;color:green;"></i> WhatsApp: +5511941949178</p>
-      <p class="text-sm">⏰ Sexta-feira, Sábado e Domingos: 10h - 22h</p>
-    </div>
-
-  </div>
-
-  <!-- Copyright -->
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 text-center text-xs text-gray-400">
-      © <span id="year"></span> Gastronomia Angolana Premium. Todos os direitos reservados.  
-      <br class="md:hidden" />
-      <span class="block md:inline mt-1">
-        <a 
-          href="https://wa.link/lj1ijj"
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="text-[#B8860B] font-semibold hover:underline"
-        >
-      Falar com o Desenvolvedor
-      </a>
-      </span>
+      <h4 class="text-white font-bold mb-6">Atendimento</h4>
+      <p class="text-sm mb-2"><i class="fas fa-map-marker-alt text-[#B8860B] mr-2"></i> São Paulo, Brasil</p>
+      <p class="text-sm mb-2"><i class="fab fa-whatsapp text-green-500 mr-2"></i> +55 11 94194-9178</p>
+      <p class="text-sm"><i class="far fa-clock text-[#B8860B] mr-2"></i> Sex a Dom: 10h - 22h</p>
     </div>
   </div>
+
+  <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center text-xs">
+    <p>© <span id="year"></span> Gastronomia Angolana Premium. Desenvolvido com paixão.</p>
+    <br class="md:hidden" /> <span class="block md:inline mt-1"> <a href="https://wa.link/lj1ijj" target="_blank" rel="noopener noreferrer" class="text-[#B8860B] font-semibold hover:underline" > Falar com o Desenvolvedor </a> </span>
+  </div>
+  
 </footer>
 
+<a href="https://wa.me/5511941949178" class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 flex items-center justify-center rounded-full shadow-[0_10px_25px_rgba(34,197,94,0.4)] text-white z-50 hover:scale-110 transition-transform">
+  <i class="fab fa-whatsapp text-3xl"></i>
+</a>
+
 <script>
+  function openModal(prato) {
+    const modal = document.getElementById('modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.getElementById('prato').value = prato;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  }
+
+  function sendWhatsApp() {
+    const prato = document.getElementById('prato').value;
+    const nome = document.getElementById('nome').value;
+    const morada = document.getElementById('morada').value;
+    const qtd = document.getElementById('quantidade').value;
+    const obs = document.getElementById('obs').value;
+    
+    if(!nome || !morada) { alert("Por favor, preencha nome e endereço."); return; }
+
+    const msg = `*NOVO PEDIDO* %0A-----------------------%0A*Prato:* ${prato}%0A*Nome:* ${nome}%0A*Entrega:* ${morada}%0A*Qtd:* ${qtd}%0A*Obs:* ${obs}`;
+    const phone = "5511941949178";
+    window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${msg}`, "_blank");
+  }
+
+  function sendCustomOrder() {
+    const checkboxes = document.querySelectorAll('.item-checkbox:checked');
+    let itens = Array.from(checkboxes).map(cb => cb.value);
+
+    if(itens.length === 0){ alert("Selecione pelo menos um item."); return; }
+
+    const nome = document.getElementById('customNome').value;
+    const morada = document.getElementById('customMorada').value;
+    const qtd = document.getElementById('customQtd').value;
+    const obs = document.getElementById('customObs').value;
+
+    const msg = `*PEDIDO PERSONALIZADO*%0A-----------------------%0A*Itens:* ${itens.join(", ")}%0A*Nome:* ${nome}%0A*Entrega:* ${morada}%0A*Quantidade:* ${qtd}%0A*Obs:* ${obs}`;
+    window.open(`https://api.whatsapp.com/send?phone=5511941949178&text=${msg}`, "_blank");
+  }
+
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+</body>
 </html>
