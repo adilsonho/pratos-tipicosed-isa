@@ -40,7 +40,7 @@ src="https://www.facebook.com/tr?id=1251687887065006&ev=PageView&noscript=1"
 
 <nav class="glass-nav sticky top-0 z-40 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="text-xl font-bold text-[#8B4513]">PRATOSTIPICOS<span class="text-[#B8860B]"> <i class="fas fa-utensils text-[#b8860b] mr-2"></i>ED&ISA</span></span>
+    <span class="text-xl font-bold text-[#8B4513]">PRATOSTIPICOS<span class="text-[#B8860B]"> <i class="fas fa-utensils text-[#b8860b] mr-2"></i>EDISA</span></span>
     <div class="hidden md:flex gap-6 text-sm font-semibold uppercase tracking-wider">
       <a href="#menu" class="hover:text-[#B8860B] transition">Menu</a>
       <a href="#combos" class="hover:text-[#B8860B] transition">Combos</a>
@@ -501,6 +501,18 @@ alert("Chave PIX copiada!");
 
 }
 
+function toggleCart(){
+
+const panel = document.getElementById("cart-panel");
+
+if(panel.classList.contains("translate-x-full")){
+panel.classList.remove("translate-x-full");
+}else{
+panel.classList.add("translate-x-full");
+}
+
+}
+
 function updateCart(){
 
 const cartItems = document.getElementById("cart-items");
@@ -526,6 +538,8 @@ total += item.price;
 });
 
 cartTotal.innerText = total.toFixed(2);
+
+document.getElementById("cart-count").innerText = cart.length;
 
 }
 
@@ -577,11 +591,13 @@ updateCart();
 }
 
 </script>
-<!-- CARRINHO -->
-<div class="fixed bottom-6 left-6 bg-white shadow-xl rounded-xl p-5 w-80 z-50">
+
+<!-- PAINEL DO CARRINHO -->
+<div id="cart-panel"
+class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 p-5">
 
 <h3 class="font-bold text-lg mb-3 text-[#8B4513]">
-🛒 Carrinho
+🛒 Seu Pedido
 </h3>
 
 <ul id="cart-items" class="text-sm mb-3 space-y-2"></ul>
@@ -609,7 +625,9 @@ class="border px-2 py-1 rounded text-center text-sm w-full"
 <button 
 onclick="copyPix()"
 class="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700">
+
 Copiar
+
 </button>
 
 </div>
@@ -622,6 +640,24 @@ class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-7
 Finalizar Pedido
 
 </button>
+
+</div>
+
+
+<!-- BOTÃO CARRINHO -->
+<div onclick="toggleCart()"
+class="fixed top-5 right-6 bg-[#8B4513] text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer z-50 hover:scale-110 transition">
+
+<i class="fas fa-shopping-cart text-xl"></i>
+
+<span id="cart-count"
+class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+
+0
+
+</span>
+
+</div>
 
 </body>
 </html>
